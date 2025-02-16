@@ -1,0 +1,51 @@
+<main>
+  <nav #menu class="fixed-right-nav">
+    <div class="w-full max-w-full p-4 flex justify-between items-center">
+      <div style="color: white" class="bg-brown-500 p-2">
+        <img src="./assets/fotos/jasonLogo.svg" alt="Logo" class="logo">
+      </div>
+      <div class="p-2">
+        <div class="menu-activador" (change)="toggleModal()">
+          <input type="checkbox" id="lanzador" />
+          <label for="lanzador">
+            <span class="menu-activador-linea"></span>
+            <span class="menu-activador-linea"></span>
+            <span class="menu-activador-linea"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal -->
+    <div *ngIf="isModalOpen" class="fixed inset-0 flex justify-end items-start modal-container">
+      <div class="modal-open bg-white rounded-lg shadow-lg w-64 mt-16 mr-10 p-8 modal-content">
+        <ul class="space-y-4">
+          <li><a href="#hello" (click)="toggleModal()" class="text-black no-underline hover:text-primary">Hello</a></li>
+          <li><a href="#aboutme" (click)="toggleModal()" class="text-black no-underline hover:text-primary">About Me</a></li>
+          <li><a href="#skill" (click)="toggleModal()" class="text-black no-underline hover:text-primary">Skill</a></li>
+          <li><a href="#otherskill" (click)="toggleModal()" class="text-black no-underline hover:text-primary">Other Skill</a></li>
+          <li><a href="#stady" (click)="toggleModal()" class="text-black no-underline hover:text-primary">Study</a></li>
+          <li><a href="#contact" (click)="toggleModal()" class="text-black no-underline hover:text-primary">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav #navVertical class="fixed-left-nav">
+    <ul class="cross-site-nav">
+      <li><button type="button" aria-label="Go to first section. Hello." class="nav-bullet" (click)="scrollToSection('hello', $event)"></button></li>
+      <li><button type="button" aria-label="Go to second section. About Me." class="nav-bullet" (click)="scrollToSection('aboutme', $event)"></button></li>
+      <li><button type="button" aria-label="Go to third section. Skill." class="nav-bullet" (click)="scrollToSection('skill', $event)"></button></li>
+      <li><button type="button" aria-label="Go to fourth section. Other Skill." class="nav-bullet" (click)="scrollToSection('otherskill', $event)"></button></li>
+      <li><button type="button" aria-label="Go to fifth section. Study." class="nav-bullet" (click)="scrollToSection('stady', $event)"></button></li>
+      <li><button type="button" aria-label="Go to sixth section. Contact." class="nav-bullet" (click)="scrollToSection('contact', $event)"></button></li>
+    </ul>
+  </nav>
+
+  <app-home id="hello"></app-home>
+  <app-about-me id="aboutme" [currentSection]="currentSection"></app-about-me>
+  <app-skill id="skill" [currentSection]="currentSection"></app-skill>
+  <app-others-skils id="otherskill" [currentSection]="currentSection"></app-others-skils>
+  <app-stady id="stady" [currentSection]="currentSection" ></app-stady>
+  <app-contact id="contact" [currentSection]="currentSection"></app-contact>
+</main>

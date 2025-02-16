@@ -1,0 +1,12 @@
+<nav class="fixed-right-nav">
+    <div class="menu-toggle" (click)="toggleMenu()">
+        &#9776; <!-- Ícono de menú (hamburguesa) -->
+    </div>
+    <ul [class.show]="menuOpen">
+        <li><a routerLink="#hello">Hello</a></li>
+        <li><a routerLink="#aboutme">About Me</a></li>
+        <li><a routerLink="#skill">Skill</a></li>
+        <li><a routerLink="#otherskill">Other Skill</a></li>
+        <li><a routerLink="#stad">Stad</a></li>
+    </ul>
+</nav>

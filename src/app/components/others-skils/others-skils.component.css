@@ -1,0 +1,255 @@
+/* Estilos generales */
+.showroom {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* Ajusta la altura según sea necesario */
+  overflow: hidden;
+}
+
+.showroom-background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Ajusta el ancho según sea necesario */
+  max-width: 1200px; /* Limita el ancho máximo */
+}
+
+.featured-box {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+  height: 60vh;
+  width: 70%; /* Ajusta el ancho según sea necesario */
+  color: white;
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3); /* Sombra más larga */
+  margin: 0 20px; /* Espacio entre las flechas y el featured-box */
+}
+
+.featured-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.featured-box:hover {
+  transform: translateY(-10px);
+}
+
+.article {
+  padding: 16px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  z-index: 2;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más larga */
+  background-color: white; /* Asegura que el fondo sea visible */
+  border-radius: 8px; /* Opcional: añade bordes redondeados */
+}
+
+.article .bottom h4 {
+  font-size: 1.25rem;
+  margin: 8px 0;
+  color: #fff;
+}
+
+.article .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article .info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.article .info a {
+  display: inline-block;
+  color: #0ae448;
+  transition: color 0.3s ease;
+}
+
+.article .info a:hover {
+  color: #007bff;
+}
+
+.container-title {
+  padding: 10px 10px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.title {
+  background-color: rgba(0, 0, 0, 0.705);
+  padding: 5px 5px;
+  border-radius: 10px;
+  width: 40%;
+  text-align: center;
+  z-index: 3;
+  font-size: 1.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
+.left-arrow, .right-arrow {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  fill: white;
+  transition: transform 0.3s ease;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+  transform: scale(1.1);
+}
+
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #0ae448;
+  font-size: 1.5rem;
+}
+
+.left-arrow, .right-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-icon {
+  width: 50px; /* Tamaño por defecto */
+  height: auto;
+}
+
+.animated-link svg {
+  animation: moveX 1s infinite alternate ease-in-out;
+}
+
+@keyframes moveX {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .arrow-icon {
+    width: 40px; /* Tamaño para pantallas medianas */
+  }
+
+  .title {
+    background-color: rgba(0, 0, 0, 0.705);
+    padding: 5px 5px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    font-size: 1.5rem;
+  }
+
+  .container-title {
+    padding: 10px 10px;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+  }
+
+  .title p{
+    width: 100%;
+    font-size: 1.2rem; /* Tamaño para pantallas medianas */
+  }
+
+
+  .featured-box {
+    background-size: 220px 80px;
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+    height: 39vh;
+    width: 70%; /* Ajusta el ancho según sea necesario */
+    color: white;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3); /* Sombra más larga */
+    margin: 0 20px; /* Espacio entre las flechas y el featured-box */
+  }
+
+  
+}
+
+@media screen and (max-width: 480px) {
+  .arrow-icon {
+    width: 30px; /* Tamaño para pantallas pequeñas */
+  }
+
+  .showroom-background {
+    display: none; /* Oculta el fondo en pantallas pequeñas */
+  }
+
+  .featured-box {
+    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    height:700px; /* Ocupa toda la altura en pantallas pequeñas */
+  }
+
+  .slider {
+    width: 100%; /* Ajusta el ancho del slider */
+    max-width: 100%; /* Limita el ancho máximo */
+  }
+
+  .title h5 {
+    width: 100%;
+    font-size: 1rem; /* Tamaño para pantallas pequeñas */
+  }
+}
+
+.left-arrow:hover .arrow-icon, .right-arrow:hover .arrow-icon {
+  transform: scale(1.1); /* Efecto de hover */
+  transition: transform 0.3s ease;
+}

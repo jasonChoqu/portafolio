@@ -1,0 +1,48 @@
+.custom-border {
+    border-bottom: 4px solid #0ae448;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .custom-card {
+    border-radius: 12px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15), -4px -4px 10px rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.95);
+  }
+  
+  .cert-item, .achieve-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .cert-item:hover, .achieve-item:hover {
+    background: rgba(0, 174, 72, 0.1);
+    transform: translateX(8px);
+  }
+  
+  .cert-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .cert-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(10, 228, 72, 0.5);
+  }
+  

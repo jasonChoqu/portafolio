@@ -1,0 +1,177 @@
+
+.footer{
+    background-color: #0ae448;
+    text-align: center;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    font-family: "Tiny5", sans-serif;
+    font-style: normal;
+    color: var(--primary-color);
+    padding: 20px 20px;
+}
+
+.text-footer{
+    font-family: "Tiny5", sans-serif;
+    font-style: normal;
+    font-size: 1.1rem;
+    color: #ffffff;
+    padding: 20px 20px;
+    display: inline-block;
+    display: inline-block;
+    animation: scaleLoop 1.2s infinite alternate cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+
+@keyframes scaleLoop {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.06);
+    }
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    width: 100%;  /* Ocupa todo el ancho disponible */
+    height: 100%; /* Ocupa toda la altura de la columna */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.col-lg-4 {
+    display: flex; /* Asegura que la columna sea flexible */
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Ajusta la altura de la columna si es necesario */
+}
+
+
+/* Colores oficiales */
+.linkedin {
+    background-color: #0077b5;
+}
+
+.whatsapp {
+    background-color: #25d366;
+}
+
+.gmail {
+    background-color: #ea4335;
+}
+
+/* Efecto hover */
+.social-item:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+
+
+
+/* Estilos generales */
+.custom-border {
+    border-bottom: 4px solid #0ae448;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  /* Social Media Icons */
+  .social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    width: 200px;
+    text-align: center;
+    color: white;
+  }
+  
+  .social-item i {
+    font-size: 2rem;
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  }
+  
+  /* LinkedIn */
+  .linkedin {
+    background: #0077b5;
+  }
+  
+  .linkedin:hover {
+    background: #005a8c;
+    transform: scale(1.05);
+  }
+  
+  .linkedin:hover i {
+    transform: rotate(360deg);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* WhatsApp */
+  .whatsapp {
+    background: #25d366;
+  }
+  
+  .whatsapp:hover {
+    background: #1ebe57;
+    transform: scale(1.05);
+  }
+  
+  .whatsapp:hover i {
+    transform: rotate(360deg);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Gmail */
+  
+  
+  .gmail:hover {
+    background: #b0211c;
+    transform: scale(1.05);
+  }
+  
+  .gmail:hover i {
+    transform: rotate(360deg);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #0ae448;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-top: 4px solid white;
+  }
+  

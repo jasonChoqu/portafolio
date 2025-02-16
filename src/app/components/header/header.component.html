@@ -1,0 +1,25 @@
+<header class="fixed top-0 left-0 w-full flex items-center z-1000" style="background-color: aquamarine;">
+    <div class="container-fluid flex justify-between items-center">
+      <div>
+        <img src="./assets/fotos/fondoverde.png" alt="Logo" class="h-16 w-auto">
+      </div> 
+      <div class="menu-activador">
+        <input type="checkbox" id="lanzador" (change)="toggleMenu()" />
+        <label for="lanzador">
+          <span class="menu-activador-linea"></span>
+          <span class="menu-activador-linea"></span>
+          <span class="menu-activador-linea"></span>
+        </label>
+      </div>
+      <nav id="contact-menu" aria-label="Contact menu" [class.show]="menuOpen">
+        <ul itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" class="cross-site-nav">
+          <li><a href="#hello">Hello</a></li>
+          <li><a href="#aboutme">About Me</a></li>
+          <li><a href="#skill">Skill</a></li>
+          <li><a href="#otherskill">Other Skill</a></li>
+          <li><a href="#stady">Stady</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>

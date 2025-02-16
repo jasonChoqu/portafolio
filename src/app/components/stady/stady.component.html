@@ -1,0 +1,68 @@
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="container">
+          <div class="row d-flex justify-content-center items-center">
+            <div class="col-lg-12 col-mx-12 col-md-12 d-flex justify-content-center my-5 p-6">
+              <h2 class="title text-center custom-border"
+              [ngStyle]="{'color': currentSection === 'stady' ? '#0ae448' : 'white'}"
+              [@fadeIn]>
+                <i class="fas fa-award"></i> Certifications & Achievements
+              </h2>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+
+    <div class="col-12 d-flex justify-content-center">
+      <div class="container">
+        <div class="row">
+          
+          <!-- Certifications Section -->
+          <div #certifications class="col-lg-6 col-md-12 mb-4" [@fadeIn]>
+            <div class="card custom-card">
+              <div class="card-body">
+                <h3 class="text-center">
+                  <i class="fa-solid fa-file-certificate text-primary"></i> Certifications
+                </h3>
+                <ul class="list-unstyled">
+                  <li class="cert-item">
+                    <a href="https://www.nextraining.es/diplomas/comprobar.php?code=16130651631306" target="_blank" class="cert-link btn btn-primary text-white">
+                      <i class="fa-solid fa-certificate"></i> I completed an intensive 2.5-month course at NEXTRAINING GLOBAL S.L., gaining skills in customization, configuration, and solution development in Microsoft Dynamics 365 Business Central.
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+      
+          <!-- Other Achievements Section -->
+            <div  #achivements class="col-lg-6 col-md-12 mb-4" [@fadeIn]>
+              <div class="card custom-card">
+                <div class="card-body">
+                  <h3 class="text-center">
+                    <i class="fa-solid fa-trophy text-warning"></i> Achievements
+                  </h3>
+                  <ul class="list-unstyled">
+                    <li class="achieve-item">
+                      <i class="fa-solid fa-medal text-success"></i>
+                      Graduated as a Systems Engineer from Universidad Mayor de San Simón
+                    </li>
+                    <li class="achieve-item">
+                      <i class="fa-solid fa-star text-danger"></i>
+                      English level B1, completed a 9-month course at Ciudad de Refugio Institute
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

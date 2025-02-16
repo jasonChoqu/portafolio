@@ -1,0 +1,240 @@
+/* Estilos generales */
+.title { 
+  font-family: "Tiny5", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.image-container {
+  position: relative;
+  height: 60vh; /* Ajusta según sea necesario */
+}
+
+.foreground-image, .background-image {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  opacity: 0; /* Inicialmente ocultas */
+  border: 4px solid var(--primary-color); /* Solo borde */
+  border-radius: 20px;
+}
+
+/* Timeline horizontal */
+.timeline-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh; /* Conserva el tamaño actual */
+  position: relative;
+  margin-top: 20px; /* Espacio entre el texto y el timeline */
+}
+
+
+.timeline-horizontal::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px; /* Línea más delgada */
+  background-color: #0ae448;
+  transform: translateY(-200%);
+  z-index: 0;
+  border-radius: 2px; /* Bordes redondeados */
+}
+
+.timeline-container {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  padding: 10px; /* Más espacio interno */
+  border-radius: 10px; /* Bordes más redondeados */
+  width: 24%; /* Conserva el ancho actual */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de hover */
+  top: 75px;
+}
+
+.timeline-container:hover {
+  transform: translateY(-10px); /* Eleva el contenedor al hacer hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más grande al hacer hover */
+}
+
+
+.timeline-container h2 {
+  font-size: 1rem;
+  font-weight: 600; /* Texto más grueso */
+  color: #333; /* Color de texto más oscuro */
+  margin-bottom: 5px; /* Espacio entre el título y el párrafo */
+}
+
+
+.timeline-container p {
+  font-size: 0.6rem; /* Texto un poco más grande */
+  color: #666; /* Color de texto más suave */
+  line-height: 1.4; /* Mejor espaciado entre líneas */
+  margin: 0; /* Elimina los márgenes */
+  padding: 0; /* Elimina el padding */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 4px solid #0ae448;
+  border-radius: 50%;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* Ajustes para la línea del timeline 
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  width: 100%; 
+  height: 4px; 
+  background-color: #0ae448; 
+  transform: translate(-50%, -50%); 
+  z-index: -1; 
+}
+*/
+
+.about-me-text {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .timeline-horizontal {
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+
+  .timeline-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  
+  .timeline-horizontal::before {
+    height: 100%;
+    width: 4px;
+    transform: translateX(-200%);
+  }
+
+  .timeline-container::before {
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border: 4px solid #0ae448;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background-color: white;
+    border: 0px solid #0ae448;
+    border-radius: 50%;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .image-container {
+    position: relative;
+    height: 40vh; /* Ajusta según sea necesario */
+  }
+  .foreground-image, .background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Inicialmente ocultas */
+    border: 4px solid var(--primary-color); /* Solo borde */
+    border-radius: 20px;
+  }
+  
+}
+
+
+@media screen and (max-width: 768px) {
+  .about-me-text {
+    font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-me-text {
+    font-size: 0.9rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+  }
+  .image-container{
+    display: block ; /* Cambia el display a block en pantallas más pequeñas */
+    justify-content: none ; /* Cambia la justificación en pantallas más pequeñas */
+    align-items: none; /* Cambia la alineación en pantallas más pequeñas */
+  }
+
+  .about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .timeline-horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50vh; /* Conserva el tamaño actual */
+    position: relative;
+    margin-top: 20px; /* Espacio entre el texto y el timeline */
+  }
+
+  .timeline-container {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    padding: 10px; /* Más espacio interno */
+    border-radius: 10px; /* Bordes más redondeados */
+    width: 100%; /* Conserva el ancho actual */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de hover */
+    top: 0px;
+  }
+  
+  .timeline-container::before {
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border: 4px solid #0ae448;
+    top: -17px;
+    left: 47%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+}

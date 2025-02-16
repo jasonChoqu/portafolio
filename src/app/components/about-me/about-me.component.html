@@ -1,0 +1,69 @@
+<section class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-mx-12 col-md-12 d-flex justify-content-center my-5 p-6">
+              <h2 class="title" [ngStyle]="{'color': currentSection === 'aboutme' ? '#0ae448' : 'white'}" class="text-center custom-border">
+                <i class="fas fa-user"></i> About Me
+              </h2>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-center">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 flex justify-center" style="position: relative;">
+                    <figure class="image-container flex justify-center items-center" style="width: 100%">
+                      <img #foregroundImage src="./assets/fotos/blanconegroportafolio.png" alt="Foreground Image" class="foreground-image">
+                      <img #backgroundImage src="./assets/fotos/fondoverde.png" alt="Background Image" class="background-image">
+                    </figure>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center items-center">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div #aboutMe class="about-me col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center items-center">
+                          <p class="about-me-text">
+                            I am a Systems Engineer with a passion for developing innovative and functional web and mobile applications. With nearly four years of experience, I have worked on diverse projects, always seeking new challenges that allow me to grow and refine my skills. I am committed to creating high-quality digital solutions that enhance user experience and drive business success.
+                          </p>
+                        </div>
+  
+                        <div #timeline class="col-lg-12">
+                          <div class="timeline-horizontal">
+                            <div class="timeline-container">
+                              <div class="content">
+                                <h2>2020</h2>
+                                <p>I worked as a freelance designer for Chaski App and other clients, creating logos and visual assets using Illustrator and Photoshop to enhance brand identity.</p>
+                              </div>
+                            </div>
+                            <div class="timeline-container">
+                              <div class="content">
+                                <h2>2021</h2>
+                                <p>At UMSS, I developed my thesis project, while at Xhanthops, I completed my internship, working with Laravel and Angular to build scalable solutions.</p>
+                              </div>
+                            </div>
+                            <div class="timeline-container">
+                              <div class="content">
+                                <h2>2022</h2>
+                                <p>At HostingBO.net, I have worked for one year using JavaScript, Laravel, Angular, and Flutter, focusing on maintaining and enhancing web applications.</p>
+                              </div>
+                            </div>
+                            <div class="timeline-container">
+                              <div class="content">
+                                <h2>2023-2024</h2>
+                                <p>At OA Foods, I developed a discount system and integrated Business Central, Outlook, and Azure with Angular, Laravel.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                  </div>
+                </div>
+                <!-- Timeline horizontal -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

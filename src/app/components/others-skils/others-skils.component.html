@@ -1,0 +1,57 @@
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="container">
+        <div class="row d-flex justify-content-center items-center">
+          <div class="col-lg-12 col-mx-12 col-md-12 d-flex justify-content-center my-5 p-6">
+            <h2 class="title" [ngStyle]="{'color': currentSection === 'otherskill' ? '#0ae448' :  'white'}" class="text-center custom-border">
+              <i class="fas fa-archive"></i> WORK ARCHIVE
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div #carusel class="showroom">
+    <div class="showroom-background" [ngStyle]="{'background-image': 'url(' + images[currentIndex] + ')', 'filter': 'blur(5px)'}"></div>
+    <section class="slider">
+      <button (click)="prevImage()" class="left-arrow">
+        <svg class="arrow-icon" viewBox="0 0 195 324" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M162 33L33 162L162 291" stroke="#09DD46" stroke-width="64.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+  
+      <div class="featured-box" [style.backgroundImage]="'url(' + images[currentIndex] + ')'" *ngIf="!loading">
+        <div class="container-title d-flex justify-content-center items-center">
+          <div class="title">
+            <p>Project: <span style="color: #0ae448;">{{ titles[currentIndex] }}</span></p>
+          </div>
+        </div>
+        <div class="article">
+          <div class="bottom">
+            <p>{{ imageTitles[currentIndex] }}</p>
+            <div class="info">
+              <p>{{ imageDates[currentIndex] }}</p>
+              <a [href]="imageLinks[currentIndex]" target="_blank" rel="noreferrer" class="animated-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 12L22 12M22 12L15 5M22 12L15 19" stroke="#0AE448" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="loading-indicator" *ngIf="loading">
+        <p>Cargando...</p>
+      </div>
+      
+      <button (click)="nextImage()" class="right-arrow">
+        <svg class="arrow-icon" viewBox="0 0 65 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 11L54.3855 52.8721L11 94.7442" stroke="#09DD46" stroke-width="20.936" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </section>
+  </div>
+</section>
