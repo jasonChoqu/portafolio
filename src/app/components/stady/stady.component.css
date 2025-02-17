@@ -46,3 +46,18 @@
     box-shadow: 0px 0px 10px rgba(10, 228, 72, 0.5);
   }
   
+
+
+  @media screen and (max-width: 480px) {
+   
+    .cert-item, .achieve-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      padding: 10px;
+      border-radius: 6px;
+      transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+      cursor: pointer;
+    }
+  }

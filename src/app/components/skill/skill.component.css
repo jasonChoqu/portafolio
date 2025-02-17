@@ -41,7 +41,9 @@
   }
 
 
-
+  span{
+    font-family: "Tiny5", sans-serif;
+  }
 
   /* Media queries para ajustar el tamaño de las imágenes en dispositivos móviles */
   @media (max-width: 768px) {

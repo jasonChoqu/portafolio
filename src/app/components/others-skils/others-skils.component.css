@@ -2,7 +2,7 @@
 .showroom {
   position: relative;
   width: 100%;
-  height: 90vh; /* Ajusta la altura según sea necesario */
+  height: 100vh; /* Ajusta la altura según sea necesario */
   overflow: hidden;
 }
 
@@ -114,6 +114,7 @@
   text-align: center;
   z-index: 3;
   font-size: 1.5rem;
+  font-family: "Tiny5", sans-serif;
 }
 
 p {
@@ -206,7 +207,7 @@ p {
 
 
   .featured-box {
-    background-size: 220px 80px;
+    background-size: 600px 550px;
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat;
     border-radius: 8px;
@@ -229,13 +230,20 @@ p {
     width: 30px; /* Tamaño para pantallas pequeñas */
   }
 
+  .showroom {
+    position: relative;
+    width: 100%;
+    height: 75vh; /* Ajusta la altura según sea necesario */
+    overflow: hidden;
+  }
+
   .showroom-background {
     display: none; /* Oculta el fondo en pantallas pequeñas */
   }
 
   .featured-box {
     width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-    height:700px; /* Ocupa toda la altura en pantallas pequeñas */
+    height:500px; /* Ocupa toda la altura en pantallas pequeñas */
   }
 
   .slider {
