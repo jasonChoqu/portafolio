@@ -1,0 +1,47 @@
+/* Modern glassy header */
+.modern-header {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 10px 0;
+}
+
+.cross-site-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.cross-site-nav a {
+  color: white;
+  font-family: 'Tiny5', sans-serif;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cross-site-nav a:hover {
+  color: var(--primary-color);
+}
+
+.menu-activador {
+  cursor: pointer;
+}
+
+#contact-menu {
+  display: none;
+}
+
+#contact-menu.show {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .menu-activador {
+    display: none;
+  }
+  #contact-menu {
+    display: block !important;
+  }
+}

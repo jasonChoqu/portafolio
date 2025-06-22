@@ -44,8 +44,13 @@ export class AppComponent {
       const element = document.querySelector('#' + section) as HTMLElement;
        if (element && scrollPosition >= element.offsetTop - element.clientHeight / 3) {
           this.currentSection = section;
+          const buttons = document.querySelectorAll('.nav-bullet');
+          buttons.forEach(btn => btn.classList.remove('active'));
+          if (buttons[i]) {
+            buttons[i].classList.add('active');
+          }
           console.log(this.currentSection);
-         break;
+          break;
        }
     }
   }
