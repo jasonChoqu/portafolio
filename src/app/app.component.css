@@ -147,6 +147,12 @@ label {
   transform: rotate(45deg); /* Mantiene la rotación de 45 grados al presionar */
 }
 
+.nav-bullet.active {
+  background-color: var(--primary-color);
+  color: #fff;
+  transform: rotate(45deg);
+}
+
 .custom-border {
   border: 3px solid var(--primary-color);
   border-radius: 6px;
